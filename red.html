@@ -40,42 +40,57 @@
 
 </head>
 
-<body class="homepage">
+<body>
 
    <!-- Header
    =================================================== -->
     <div w3-include-html="header.html"></div>
 
-   <!-- Portfolio
+
+   <!-- Content
    ================================================== -->
-   <section id="portfolio">
+   <section id="content">
 
-      <div class="row items">
+   	<div class="row portfolio-content">
 
-      	<div class="twelve columns">
+	   	<div class="entry tab-whole eleven columns centered">
 
-            <div id="portfolio-wrapper" class="bgrid-third s-bgrid-third mob-bgrid-half group">
-                 
-                <div w3-include-html="works.html"></div>
+	         <header class="entry-header">
 
-            </div> <!-- /portfolio-wrapper -->
+					<h1 class="entry-title">
+							RED
+					</h1> 				 
+						
+					<div class="entry-meta">
+						<ul>
+							<li>
+								<a rel="skills tag" title="" href="#">Photography</a>
+							</li>
+						</ul>
+					</div> 
+						 
+				</header>
 
-         </div> <!-- /twelve -->
+				<div class="entry-content">
+					<p>Photographic project which consisted in depict a song (Vermillion pt. 2 of Slipknot) through images. Experimentation with edition processes. The color of the pictures is due to these were scanned directly from the negative. The strange shapes and waves of the last picture is cause of the same procedure but the scanner was moved intenttionally during the process. Show the meaning of a song in images is a hard work, due to the multiple interpretations that a phrase may have. It is challenging in terms of what technique is wanted to use and how to apply it to represent the essence of the musical piece.</p>
+				</div>
 
-      </div>  <!-- /row -->
-      
-   </section> <!-- /Portfolio -->
+				<div class="entry-content-media">
+					<div class="post-thumb">
+						<img src="images/portfolio/red01.jpg">
+						<img src="images/portfolio/red02.jpg">
+						<img src="images/portfolio/red03.jpg">
+					</div> 
+				</div> 					 
 
+										   	         
+	      </div> <!-- /entry -->	      
 
- 
+	   </div> <!-- /portfolio-content -->
 
-   <!-- About Section
-   ================================================== -->
-   <section id="about">
+       <div id="other"></div>
 
-    <div w3-include-html="about.html"></div>
-  
-    </section>
+   </section> <!-- /content -->  
 
 
   
@@ -105,6 +120,14 @@
    <script src="js/waypoints.js"></script>  
    <script src="js/main.js"></script>
    <script>window.onbeforeunload = function () {window.scrollTo(0,0);};</script>
+
+   <!--Funcion para mostrar aleatoriamente la seccion de Other works-->
+   <script>    
+    $( document ).ready(function() {
+        $( "#other" ).load( "otherworks.html" );
+    });
+   </script>
+   <!--Funcion para mostrar aleatoriamente la seccion de Other works-->
 
 </body>
 

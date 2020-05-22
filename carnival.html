@@ -40,42 +40,59 @@
 
 </head>
 
-<body class="homepage">
+<body>
 
    <!-- Header
    =================================================== -->
     <div w3-include-html="header.html"></div>
 
-   <!-- Portfolio
+
+   <!-- Content
    ================================================== -->
-   <section id="portfolio">
+   <section id="content">
 
-      <div class="row items">
+   	<div class="row portfolio-content">
 
-      	<div class="twelve columns">
+	   	<div class="entry tab-whole eleven columns centered">
 
-            <div id="portfolio-wrapper" class="bgrid-third s-bgrid-third mob-bgrid-half group">
-                 
-                <div w3-include-html="works.html"></div>
+	         <header class="entry-header">
 
-            </div> <!-- /portfolio-wrapper -->
+					<h1 class="entry-title">
+							Blacks and White's Carnival
+					</h1> 				 
+						
+					<div class="entry-meta">
+						<ul>
+							<li>
+								<a rel="skills tag" title="" href="#">Photography</a>
+							</li>
+						</ul>
+					</div> 
+						 
+				</header>
 
-         </div> <!-- /twelve -->
+				<div class="entry-content">
+					<p>Photographs taken in the context of the Blacks and Whites’ Carnival, celebrated in the town of Pasto, department of Nariño (Colombia). Edited with software Adobe Camera RAW. This carnival showcase the tolerance between different races and cultures through games and festivities. Is strongly rotted in the culture of the city, and, as one of its symbols permits to see the warmness of its people. The tradition started sometime during the Spanish rule when the slaves were permitted to party by their masters, who painted their faces in black in support.</p>
+				</div>
 
-      </div>  <!-- /row -->
-      
-   </section> <!-- /Portfolio -->
+				<div class="entry-content-media">
+					<div class="post-thumb">
+						<img src="images/portfolio/carnival01.jpg">
+						<img src="images/portfolio/carnival02.jpg">
+						<img src="images/portfolio/carnival03.jpg">
+						<img src="images/portfolio/carnival04.jpg">
+						<img src="images/portfolio/carnival05.jpg">
+					</div> 
+				</div> 					 
 
+										   	         
+	      </div> <!-- /entry -->	      
 
- 
+	   </div> <!-- /portfolio-content -->
 
-   <!-- About Section
-   ================================================== -->
-   <section id="about">
+       <div id="other"></div>
 
-    <div w3-include-html="about.html"></div>
-  
-    </section>
+   </section> <!-- /content -->  
 
 
   
@@ -105,6 +122,14 @@
    <script src="js/waypoints.js"></script>  
    <script src="js/main.js"></script>
    <script>window.onbeforeunload = function () {window.scrollTo(0,0);};</script>
+
+   <!--Funcion para mostrar aleatoriamente la seccion de Other works-->
+   <script>    
+    $( document ).ready(function() {
+        $( "#other" ).load( "otherworks.html" );
+    });
+   </script>
+   <!--Funcion para mostrar aleatoriamente la seccion de Other works-->
 
 </body>
 

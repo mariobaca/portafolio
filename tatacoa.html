@@ -40,42 +40,58 @@
 
 </head>
 
-<body class="homepage">
+<body>
 
    <!-- Header
    =================================================== -->
     <div w3-include-html="header.html"></div>
 
-   <!-- Portfolio
+
+   <!-- Content
    ================================================== -->
-   <section id="portfolio">
+   <section id="content">
 
-      <div class="row items">
+   	<div class="row portfolio-content">
 
-      	<div class="twelve columns">
+	   	<div class="entry tab-whole eleven columns centered">
 
-            <div id="portfolio-wrapper" class="bgrid-third s-bgrid-third mob-bgrid-half group">
-                 
-                <div w3-include-html="works.html"></div>
+	         <header class="entry-header">
 
-            </div> <!-- /portfolio-wrapper -->
+					<h1 class="entry-title">
+							Tatacoa
+					</h1> 				 
+						
+					<div class="entry-meta">
+						<ul>
+							<li>
+								<a rel="skills tag" title="" href="#">Photography</a>
+							</li>
+						</ul>
+					</div> 
+						 
+				</header>
 
-         </div> <!-- /twelve -->
+				<div class="entry-content">
+					<p>Photographs taken in the Tatacoa Desert, located in the department of Huila (Colombia). Edited with software Adobe Photoshop and HDR process. Being the second biggest arid area in Colombia, this vast desertic land offers different approaches, from Paleontology research or Astronomics until tourism, to connect with the nature.</p>
+				</div>
 
-      </div>  <!-- /row -->
-      
-   </section> <!-- /Portfolio -->
+				<div class="entry-content-media">
+					<div class="post-thumb">
+						<img src="images/portfolio/tatacoa01.jpg">
+						<img src="images/portfolio/tatacoa02.jpg">
+						<img src="images/portfolio/tatacoa03.jpg">
+						<img src="images/portfolio/tatacoa04.jpg">
+					</div> 
+				</div> 					 
 
+										   	         
+	      </div> <!-- /entry -->	      
 
- 
+	   </div> <!-- /portfolio-content -->
 
-   <!-- About Section
-   ================================================== -->
-   <section id="about">
+       <div id="other"></div>
 
-    <div w3-include-html="about.html"></div>
-  
-    </section>
+   </section> <!-- /content -->  
 
 
   
@@ -105,6 +121,14 @@
    <script src="js/waypoints.js"></script>  
    <script src="js/main.js"></script>
    <script>window.onbeforeunload = function () {window.scrollTo(0,0);};</script>
+
+   <!--Funcion para mostrar aleatoriamente la seccion de Other works-->
+   <script>    
+    $( document ).ready(function() {
+        $( "#other" ).load( "otherworks.html" );
+    });
+   </script>
+   <!--Funcion para mostrar aleatoriamente la seccion de Other works-->
 
 </body>
 

@@ -40,42 +40,59 @@
 
 </head>
 
-<body class="homepage">
+<body>
 
    <!-- Header
    =================================================== -->
     <div w3-include-html="header.html"></div>
 
-   <!-- Portfolio
+
+   <!-- Content
    ================================================== -->
-   <section id="portfolio">
+   <section id="content">
 
-      <div class="row items">
+   	<div class="row portfolio-content">
 
-      	<div class="twelve columns">
+	   	<div class="entry tab-whole eleven columns centered">
 
-            <div id="portfolio-wrapper" class="bgrid-third s-bgrid-third mob-bgrid-half group">
-                 
-                <div w3-include-html="works.html"></div>
+	         <header class="entry-header">
 
-            </div> <!-- /portfolio-wrapper -->
+					<h1 class="entry-title">
+							MAZDA
+					</h1> 				 
+						
+					<div class="entry-meta">
+						<ul>
+							<li>
+								<a rel="skills tag" title="" href="#">Corporate Identity</a> · 
+								<a rel="skills tag" title="" href="#">Editorial Design</a> · 
+								<a rel="skills tag" title="" href="#">Print Design</a>
+							</li>
+						</ul>
+					</div> 
+						 
+				</header>
 
-         </div> <!-- /twelve -->
+				<div class="entry-content">
+					<p>Internship as a degree option. Development and application of the corporate identity of MAZDA in different digital and printed pieces. Development of virtual courses for employees capacitation. Management of MOODLE E-learning platform. As a Japanese Car Manufacturer, MAZDA applies the simplicity in all their products. Through his brand, shows the Japanese culture.</p>
 
-      </div>  <!-- /row -->
-      
-   </section> <!-- /Portfolio -->
+					<p>Doing an internship gives the opportunity to apply all the knowledge learned on the University, and permits to learn how the real world is. </p>
+				</div>
 
+				<div class="entry-content-media">
+					<div class="post-thumb">
+						<img src="images/portfolio/comingsoon.jpg">
+					</div> 
+				</div> 					 
 
- 
+										   	         
+	      </div> <!-- /entry -->	      
 
-   <!-- About Section
-   ================================================== -->
-   <section id="about">
+	   </div> <!-- /portfolio-content -->
 
-    <div w3-include-html="about.html"></div>
-  
-    </section>
+       <div id="other"></div>
+
+   </section> <!-- /content -->  
 
 
   
@@ -105,6 +122,14 @@
    <script src="js/waypoints.js"></script>  
    <script src="js/main.js"></script>
    <script>window.onbeforeunload = function () {window.scrollTo(0,0);};</script>
+
+   <!--Funcion para mostrar aleatoriamente la seccion de Other works-->
+   <script>    
+    $( document ).ready(function() {
+        $( "#other" ).load( "otherworks.html" );
+    });
+   </script>
+   <!--Funcion para mostrar aleatoriamente la seccion de Other works-->
 
 </body>
 

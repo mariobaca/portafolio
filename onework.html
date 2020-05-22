@@ -40,42 +40,58 @@
 
 </head>
 
-<body class="homepage">
+<body>
 
    <!-- Header
    =================================================== -->
     <div w3-include-html="header.html"></div>
 
-   <!-- Portfolio
+
+   <!-- Content
    ================================================== -->
-   <section id="portfolio">
+   <section id="content">
 
-      <div class="row items">
+   	<div class="row portfolio-content">
 
-      	<div class="twelve columns">
+	   	<div class="entry tab-whole eleven columns centered">
 
-            <div id="portfolio-wrapper" class="bgrid-third s-bgrid-third mob-bgrid-half group">
-                 
-                <div w3-include-html="works.html"></div>
+	         <header class="entry-header">
 
-            </div> <!-- /portfolio-wrapper -->
+					<h1 class="entry-title">
+							Alas Abroad
+					</h1> 				 
+						
+					<div class="entry-meta">
+						<ul>
+							<li>
+								<a rel="skills tag" title="" href="#">Branding</a> · 
+								<a rel="skills tag" title="" href="#">Photography</a>
+							</li>
+						</ul>
+					</div> 
+						 
+				</header>
 
-         </div> <!-- /twelve -->
+				<div class="entry-content">
+					<p>Lorem ipsum Nisi enim est proident est magna occaecat dolore proident eu ex sunt consectetur consectetur dolore enim nisi exercitation adipisicing magna culpa commodo deserunt ut do Ut occaecat. Lorem ipsum Veniam consequat quis aliquip dolore minim ex labore dolor Excepteur Duis velit in officia Excepteur officia officia officia cillum ut elit in fugiat incididunt ea ad Ut ut ea ea dolor ex dolor eu magna voluptate irure consectetur.</p>
+				</div>
 
-      </div>  <!-- /row -->
-      
-   </section> <!-- /Portfolio -->
+				<div class="entry-content-media">
+					<div class="post-thumb">
+						<img src="images/portfolio/b-coffee-02.jpg">
+						<img src="images/portfolio/b-coffee-01.jpg">
+					</div> 
+				</div> 					 
+
+										   	         
+	      </div> <!-- /entry -->	      
+
+	   </div> <!-- /portfolio-content -->
+
+        <div w3-include-html="otherworks.html"></div>
 
 
- 
-
-   <!-- About Section
-   ================================================== -->
-   <section id="about">
-
-    <div w3-include-html="about.html"></div>
-  
-    </section>
+   </section> <!-- /content -->  
 
 
   
@@ -105,6 +121,54 @@
    <script src="js/waypoints.js"></script>  
    <script src="js/main.js"></script>
    <script>window.onbeforeunload = function () {window.scrollTo(0,0);};</script>
+
+   <!--Funcion para mostrar aleatoriamente la seccion de Other works-->
+   <script>
+    function shuffle(array) {
+      var currentIndex = array.length
+        , temporaryValue
+        , randomIndex
+        ;
+
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+    }
+
+    (function ($) {
+        $.fn.randomize = function (childElem) {
+            return this.each(function () {
+                var $this = $(this);
+                var elems = shuffle($(childElem));
+                $this.remove(childElem);
+                for (var i = 0; i < elems.length; i++){
+                $this.append(elems[i]);
+                if (i <= 3){
+                    $(elems[i]).show();
+                }else{
+                    $(elems[i]).hide();
+                }
+                }
+            });
+        }
+    })(jQuery)
+
+    jQuery(function($){
+        $("div#portfolio-wrapper").randomize("div.bgrid");
+    });
+   </script>
+   <!--Funcion para mostrar aleatoriamente la seccion de Other works-->
 
 </body>
 
