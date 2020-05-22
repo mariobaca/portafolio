@@ -1,0 +1,41 @@
+/*fuentes*/
+@font-face {
+    font-family: 'avenir';
+    src: url('fonts/Avenir-Roman.woff') format('woff');
+}
+/*fuentes*/
+
+body,html {
+	margin: 0px auto;
+    font-family: 'avenir' !important;
+    font-size: 1rem;
+}
+
+header{
+    font-family: 'avenir';
+    background-color: white;
+    box-shadow: 0px 0px 5px black;
+    text-align: center;
+    height: auto;
+    padding: 0.3rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header b{
+    margin-top: 10rem;
+}
+
+.container{
+    margin-top: 3rem !important;
+}
+
+.separador{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.row i{
+    color: darkgrey;
+}
